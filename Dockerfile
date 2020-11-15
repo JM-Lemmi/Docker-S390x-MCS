@@ -1,11 +1,11 @@
 #FROM s390x/openjdk:8
 FROM amd64/openjdk:8
 
-COPY ./server /var/games/minecraft/server/
-#die files müssen die richtige Server Version, EULA=ture, etc enthalten!
 WORKDIR /var/games/minecraft/server
 #auto-accept EULA
 RUN echo "eula=true" > /var/games/minecraft/server/eula.txt
+#download the server jar
+ADD https://launcher.mojang.com/v1/objects/35139deedbd5182953cf1caa23835da59ca3d7cd/server.jar /var/games/minecraft/server/minecraft_server.jar
 
 EXPOSE 25565
 
