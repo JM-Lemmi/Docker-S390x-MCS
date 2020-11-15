@@ -7,4 +7,4 @@ WORKDIR /var/games/minecraft/server
 
 EXPOSE 25565
 
-RUN java -Xmx2048M -Xms2048M -jar minecraft_server.jar nogui
+CMD java -Xmx2048M -Xms2048M -jar minecraft_server.jar nogui
