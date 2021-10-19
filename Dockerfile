@@ -1,5 +1,6 @@
-#FROM s390x/openjdk:8
-FROM amd64/openjdk:8
+ARG ARCH=
+
+FROM {arch}/openjdk:8
 
 WORKDIR /var/games/minecraft/server
 #auto-accept EULA
